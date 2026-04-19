@@ -1,0 +1,406 @@
+/* ═══════════════════════════════════════════════════════════
+   JOJODLE – Premium Responsive Navigation
+   JoJo-themed glassmorphism nav with purple/gold accents
+   ═══════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ── Reset ────────────────────────────────────────────────── */
+.jojo-nav, .jojo-nav * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 64px !important;
+}
+
+/* ── Nav Bar ──────────────────────────────────────────────── */
+.jojo-nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 9999 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+  display: block !important;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  box-sizing: border-box !important;
+}
+
+/* Gradient accent strip at top */
+.jojo-nav::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, #7c3aed, #a855f7, #d97706, #f59e0b, #7c3aed);
+  background-size: 200% 100%;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.jojo-nav-inner {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 24px;
+  height: 64px;
+  background: rgba(18, 7, 33, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.15);
+}
+
+/* ── Logo ─────────────────────────────────────────────────── */
+.jojo-nav .nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.jojo-nav .nav-logo-img {
+  height: 44px;
+  width: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.jojo-nav .nav-logo:hover .nav-logo-img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.5));
+}
+
+/* ── Menu List ────────────────────────────────────────────── */
+.jojo-nav .nav-menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 4px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ── Menu Links ───────────────────────────────────────────── */
+.jojo-nav .nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border-radius: 8px;
+  transition: color 0.3s ease, background 0.3s ease;
+  white-space: nowrap;
+}
+
+.jojo-nav .nav-link:hover {
+  color: #ffffff;
+  background: rgba(124, 58, 237, 0.12);
+}
+
+/* Animated underline on hover */
+.jojo-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 16px;
+  right: 16px;
+  height: 2px;
+  background: linear-gradient(90deg, #a855f7, #d97706);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.jojo-nav .nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* ── Dropdown ─────────────────────────────────────────────── */
+.jojo-nav .nav-dropdown {
+  position: relative;
+}
+
+.jojo-nav .dropdown-toggle {
+  cursor: pointer;
+  user-select: none;
+}
+
+.jojo-nav .dropdown-arrow {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 0.65rem;
+  transition: transform 0.3s ease;
+}
+
+.jojo-nav .nav-dropdown:hover .dropdown-arrow,
+.jojo-nav .nav-dropdown.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.jojo-nav .dropdown-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 220px;
+  background: rgba(24, 12, 46, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.3),
+    0 10px 15px -3px rgba(0, 0, 0, 0.2),
+    0 0 30px -5px rgba(124, 58, 237, 0.1);
+
+  /* Hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  z-index: 100;
+}
+
+/* Show on hover (desktop) */
+.jojo-nav .nav-dropdown:hover .dropdown-panel,
+.jojo-nav .nav-dropdown.open .dropdown-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.jojo-nav .dropdown-link {
+  display: block;
+  padding: 10px 14px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+}
+
+.jojo-nav .dropdown-link:hover {
+  background: rgba(124, 58, 237, 0.18);
+  color: #ffffff;
+  padding-left: 18px;
+}
+
+.jojo-nav .dropdown-divider {
+  height: 1px;
+  background: rgba(124, 58, 237, 0.15);
+  margin: 4px 8px;
+}
+
+/* Special accent link (Top Anime Games) */
+.jojo-nav .dropdown-link--accent {
+  color: #d97706;
+  font-weight: 600;
+}
+
+.jojo-nav .dropdown-link--accent:hover {
+  background: rgba(217, 119, 6, 0.12);
+  color: #f59e0b;
+}
+
+/* ── Hamburger ────────────────────────────────────────────── */
+.jojo-nav .hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  z-index: 10001;
+}
+
+.jojo-nav .hamburger:hover {
+  background: rgba(124, 58, 237, 0.15);
+}
+
+.jojo-nav .hamburger-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 2px;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.25s ease,
+              background 0.25s ease;
+}
+
+.jojo-nav .hamburger-bar:nth-child(1) { margin-bottom: 5px; }
+.jojo-nav .hamburger-bar:nth-child(3) { margin-top: 5px; }
+
+/* X state */
+.jojo-nav .hamburger.active .hamburger-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background: #a855f7;
+}
+
+.jojo-nav .hamburger.active .hamburger-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.jojo-nav .hamburger.active .hamburger-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  background: #a855f7;
+}
+
+/* ── Mobile Overlay ───────────────────────────────────────── */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 9997;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 992px) {
+  .jojo-nav .hamburger {
+    display: flex;
+  }
+
+  .jojo-nav .nav-menu {
+    position: fixed;
+    top: 67px; /* nav height: 64px + 3px accent strip */
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: rgba(18, 7, 33, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+    padding: 12px 16px 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+    /* Hidden by default */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease,
+                padding 0.3s ease;
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 9998;
+  }
+
+  .jojo-nav .nav-menu.active {
+    max-height: 500px;
+    opacity: 1;
+    padding: 12px 16px 20px;
+  }
+
+  .jojo-nav .nav-link {
+    padding: 14px 16px;
+    font-size: 0.95rem;
+    border-radius: 10px;
+  }
+
+  .jojo-nav .nav-link::after {
+    display: none;
+  }
+
+  .jojo-nav .nav-link:hover {
+    background: rgba(124, 58, 237, 0.15);
+  }
+
+  /* Mobile dropdown */
+  .jojo-nav .dropdown-panel {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: rgba(124, 58, 237, 0.06);
+    border: none;
+    border-radius: 10px;
+    box-shadow: none;
+    padding: 4px 8px;
+    margin-top: 4px;
+    backdrop-filter: none;
+
+    /* Hidden by default on mobile too */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.35s ease, opacity 0.25s ease, padding 0.25s ease;
+    padding: 0 8px;
+  }
+
+  .jojo-nav .nav-dropdown.open .dropdown-panel {
+    max-height: 400px;
+    opacity: 1;
+    padding: 4px 8px;
+  }
+
+  /* Disable hover-based dropdown on mobile */
+  .jojo-nav .nav-dropdown:hover .dropdown-panel {
+    opacity: 0;
+    max-height: 0;
+    visibility: hidden;
+  }
+
+  .jojo-nav .nav-dropdown.open:hover .dropdown-panel {
+    opacity: 1;
+    max-height: 400px;
+    visibility: visible;
+  }
+
+  .jojo-nav .dropdown-link {
+    padding: 12px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .jojo-nav .nav-logo-img {
+    height: 36px;
+  }
+
+  .jojo-nav-inner {
+    padding: 0 16px;
+    height: 56px;
+  }
+
+  .jojo-nav .nav-menu {
+    top: 59px; /* 56px + 3px */
+  }
+
+  .jojo-nav .nav-link {
+    padding: 12px 14px;
+    font-size: 0.9rem;
+  }
+}

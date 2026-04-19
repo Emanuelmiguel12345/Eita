@@ -1,0 +1,597 @@
+<!DOCTYPE html><html lang="en-US" prefix="og: http://ogp.me/ns#"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta property="og:locale" content="en-US">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <meta property="og:image" content="images/jojodle.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <title>
+      Jojodle | Daily JOJO's BIZARRE ADVENTURE Character Guessing Game
+    </title>
+    <meta name="description" content="Test your knowledge of JOJO's BIZARRE ADVENTURE characters with Jojodle, the daily character guessing game inspired by Wordle.">
+    <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
+    <meta property="og:title" content="Jojodle - Daily JOJO's BIZARRE ADVENTURE Character Guessing Game">
+    <meta property="og:description" content="Test your knowledge of JOJO's BIZARRE ADVENTURE manga series and try to guess their characters. A daily character guessing game inspired by Wordle.">
+    <meta property="og:url" content="https://jojodle.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jojodle - Daily JOJO's BIZARRE ADVENTURE Character Guessing Game">
+    <meta name="twitter:description" content="Test your knowledge of some of JOJO's BIZARRE ADVENTURE manga series and try to guess their characters. A daily character guessing game inspired by Wordle.">
+    <meta name="twitter:image" content="https://jojodle.com/images/opengraph-image.webp">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" sizes="16x16">
+
+    <link rel="manifest" href="manifest.json?v=1.1">
+    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="static/css/pwa.css?v=1.1">
+    <link rel="stylesheet" href="css/menu1.css">
+    <script async="" src="static/js/app.js?v=1.1"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "@id": "https://jojodle.com/#organization",
+        "name": "Jojodle",
+        "url": "https://jojodle.com",
+        "sameAs": [
+          "https://www.facebook.com/jojodle",
+          "https://www.instagram.com/jojodle",
+          "https://twitter.com/jojodle"
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "@id": "https://jojodle.com/#website",
+        "url": "https://jojodle.com/",
+        "name": "Jojodle",
+        "publisher": {
+          "@id": "https://jojodle.com/#organization"
+        },
+        "inLanguage": "en-US"
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "@id": "https://jojodle.com/#webpage",
+        "url": "https://jojodle.com/",
+        "inLanguage": "en-US",
+        "name": "Jojodle | Daily JOJO's BIZARRE ADVENTURE Character Guessing Game",
+        "isPartOf": {
+          "@id": "https://jojodle.com/#website"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "@id": "https://jojodle.com/#primaryimage",
+          "url": "https://jojodle.com/images/logo1.png",
+          "width": 1024,
+          "height": 1024
+        },
+        "primaryImageOfPage": {
+          "@id": "https://jojodle.com/#primaryimage"
+        },
+        "datePublished": "2024-11-05T12:10:00-19:00",
+        "description": "Jojodle | Daily JOJO's BIZARRE ADVENTURE Character Guessing Game"
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Product",
+        "@id": "https://jojodle.com/#product",
+        "brand": {
+          "@id": "https://jojodle.com/#organization"
+        },
+        "name": "Jojodle",
+        "description": "Jojodle | Daily JOJO's BIZARRE ADVENTURE Character Guessing Game",
+        "category": "Productivity",
+        "image": "https://jojodle.com/images/games/jojodle.png",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "worstRating": "1",
+          "bestRating": "5",
+          "ratingValue": "4.8",
+          "ratingCount": "497"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Game",
+        "name": "Jojodle",
+        "image": "https://jojodle.com/images/games/jojodle.png",
+        "applicationCategory": "Game",
+        "operatingSystem": "All"
+      }
+    </script>
+
+    <script>
+      (function () {
+        var today = new Date();
+        var dateString = today.toISOString().split("T")[0];
+
+        var schemaData = {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "ItemList",
+              name: "Today's Jojodle Character Clues - " + dateString,
+              description:
+                "Daily character guessing challenges for JOJO's BIZARRE ADVENTURE.",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Daily Jojodle Challenge",
+                  url: "https://jojodle.com/#gamecontent",
+                },
+              ],
+            },
+            {
+              "@type": "WebPage",
+              "@id": "https://jojodle.com/",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: [".headline__title", ".desctext p"],
+              },
+            },
+          ],
+        };
+
+        var script = document.createElement("script");
+        script.type = "application/ld+json";
+        script.text = JSON.stringify(schemaData);
+        document.head.appendChild(script);
+      })();
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do you play Jojodle?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every day, guess a different character from the manga/anime JOJO's BIZARRE ADVENTURE. Simply type in the name of a character and it will reveal its properties. The color of the tiles will change to show how close your guess was to the character to find."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What do the colors mean in Jojodle?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Green indicates the property is an exact match. Red indicates there is no overlap between your guess and the property. Arrows (▲ ▼) indicate if the answer property is above or below your guess."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <script type="text/javascript" src="https://cache.consentframework.com/js/pa/36937/c/ZXcbz/stub" data-cfasync="false" referrerpolicy="unsafe-url"></script>
+    <script type="text/javascript" src="https://choices.consentframework.com/js/pa/36937/c/ZXcbz/cmp" data-cfasync="false" referrerpolicy="unsafe-url" async=""></script>
+
+    <script data-cmp-src="/js/consent.js" data-cmp-fallback-src="/js/noconsent.js" data-cmp-require-choice="true"></script>
+
+    <script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+    <script>
+      window.adsbygoogle = window.adsbygoogle || [];
+      const adBreak = (adConfig = function (o) {
+        window.adsbygoogle.push(o);
+      });
+      adConfig({
+        preloadAdBreaks: "on",
+        onReady: () => {
+          console.log("H5 Interstitial prepared.");
+        },
+      });
+      window.init = function () {
+        adBreak({ type: "start", name: "game-start" });
+      };
+    </script>
+
+    <style>
+      .pwa-modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.75);
+        z-index: 99999;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(5px);
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      .pwa-modal-content {
+        background: #ffffff;
+        padding: 24px;
+        border-radius: 20px;
+        text-align: center;
+        max-width: 340px;
+        width: 90%;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        position: relative;
+        animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      @keyframes slideUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      .pwa-logo {
+        width: 80px;
+        height: 80px;
+        border-radius: 18px;
+        margin: -50px auto 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        background: #fff;
+        padding: 5px;
+        display: block;
+        object-fit: cover;
+      }
+      .pwa-modal-content h3 {
+        margin: 0 0 10px;
+        color: #1a1a1a;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+      }
+      .pwa-modal-content p {
+        color: #555555;
+        font-size: 15px;
+        margin-bottom: 24px;
+        line-height: 1.5;
+      }
+      .pwa-btn-group {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .pwa-btn {
+        padding: 14px 20px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        transition: all 0.2s ease;
+      }
+      .pwa-btn-install {
+        background: #2563eb;
+        color: #ffffff;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      }
+      .pwa-btn-install:hover {
+        background: #1d4ed8;
+        transform: translateY(-2px);
+      }
+      .pwa-btn-close {
+        background: #f1f5f9;
+        color: #475569;
+      }
+      .pwa-btn-close:hover {
+        background: #e2e8f0;
+      }
+      .headline__title {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="menu-container"></div>
+
+    <script>
+      fetch("/components/menu.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("menu-container").innerHTML = data;
+
+          // MENU TOGGLE
+          const toggle = document.getElementById("jd-toggle");
+          const menu = document.getElementById("jd-menu");
+
+          toggle.addEventListener("click", () => {
+            menu.classList.toggle("jd-active");
+          });
+
+          // 🔥 BADGE AUTOMÁTICO
+          const badge = document.getElementById("jd-badge");
+
+          // 👉 FECHA DE LANZAMIENTO (CAMBIA SOLO ESTO)
+          const launchDate = new Date("2026-04-10");
+
+          const today = new Date();
+          const diffDays = Math.floor(
+            (today - launchDate) / (1000 * 60 * 60 * 24),
+          );
+
+          if (diffDays > 7) {
+            badge.textContent = "HOT";
+            badge.classList.add("jd-hot");
+          }
+
+          if (diffDays > 30) {
+            badge.style.display = "none";
+          }
+        });
+    </script>
+
+    <div id="wrapper">
+      <div class="desctext">
+        <div class="content-profile">
+          <h1>JOJODLE</h1>
+        </div>
+
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 20px">
+          <b>Jojodle</b> is the daily character guessing game inspired by
+          Wordle. Test your knowledge of JOJO's BIZARRE ADVENTURE manga series
+          and try to guess their characters in this fun challenge.
+        </p>
+
+        <iframe class="game-iframe" id="game-area" src="jojo.html" loading="lazy" width="100%" height="1000px" frameborder="0" allowfullscreen=""></iframe>
+
+        <section class="section" id="gamecontent">
+          <div class="spellbee-container">
+            <div class="spelling-bee-text">
+              <h2 class="h2--center">How to play jojodle?</h2>
+              <ol class="ol">
+                <li>
+                  <h3>Jojodle General Information</h3>
+                  <span>Every day, guess a different character from the manga/anime
+                    JOJO's BIZARRE ADVENTURE. JOJO's BIZARRE ADVENTURE is a
+                    registered trademark, who do not endorse nor sponsor this
+                    project. Challenge yourself in this fun and interactive
+                    daily character guessing game. Each day, a new character is
+                    waiting to be guessed in this wordle like quiz, and it's up
+                    to you to figure out who they are. Compete with friends,
+                    share your daily score or streak with your communities, and
+                    test your anime knowledge as you play. Can you guess the
+                    character before time runs out? Join the excitement and see
+                    how well you know the world of "JOJO's BIZARRE ADVENTURE".
+                    The Character changes every 24 hours based on your timezone
+                    as indicated below.</span>
+                  <img src="images/jojodle1.png" alt="jojodle" title="jojodle">
+                </li>
+                <li>
+                  <h3>Jojodle Game Explanation</h3>
+                  <span>Simply type in the name of a character and it will reveal
+                    its properties. The color of the tiles will change to show
+                    how close your guess was to the character to find. Green
+                    indicates the property is an exact match. Red indicates
+                    there is no overlap between your guess and the property. ▲ ▼
+                    With arrows, it also indicates if the answer property is
+                    above or below your guess.</span>
+                  <img src="images/jojodle2.png" alt="Create a word list" title="Create a word list">
+                </li>
+                <li>
+                  <h3>Jojodle Hints</h3>
+                  <span>
+                    To help you find the character, you get to unlock clues
+                    after several guesses. The clue can be a quote from the
+                    character or about the character or mainly their title or
+                    something they done. If you guessed the character, you can
+                    come see at the bottom the clues of that day's
+                    character.</span>
+                  <img src="images/jojodle3.png" alt="Find out your score" title="Find out your score">
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--grey">
+          <div class="spellbee-container" style="padding: 20px 0">
+            <div class="faq">
+              <h2 class="headline__title">Frequently Asked Questions</h2>
+              <ol style="max-width: 800px; margin: 0 auto; text-align: left">
+                <li>
+                  <h3>How do you play Jojodle?</h3>
+                  <p>
+                    Every day, guess a different character from the manga/anime
+                    JOJO's BIZARRE ADVENTURE. Simply type in the name of a
+                    character and it will reveal its properties. The color of
+                    the tiles will change to show how close your guess was to
+                    the character to find.
+                  </p>
+                </li>
+                <li>
+                  <h3>What do the colors mean in Jojodle?</h3>
+                  <p>
+                    Green indicates the property is an exact match. Red
+                    indicates there is no overlap between your guess and the
+                    property. Arrows (▲ ▼) indicate if the answer property is
+                    above or below your guess.
+                  </p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+      fetch("/components/footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
+    <div id="promo-modal-container"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var modalCargado = false;
+        function loadModal() {
+          if (modalCargado) return;
+          modalCargado = true;
+          fetch("/components/modal-en.html?v=2.0")
+            .then(function (r) {
+              if (!r.ok) throw new Error("Modal load error");
+              return r.text();
+            })
+            .then(function (html) {
+              var c = document.getElementById("promo-modal-container");
+              c.innerHTML = html;
+              var s = c.getElementsByTagName("script");
+              for (var i = 0; i < s.length; i++) {
+                var n = document.createElement("script");
+                n.text = s[i].text;
+                document.body.appendChild(n);
+              }
+            })
+            .catch(function (e) {
+              console.error("Modal injection error:", e);
+            });
+        }
+        if (typeof __tcfapi === "function") {
+          __tcfapi("addEventListener", 2, function (d, ok) {
+            if (
+              ok &&
+              (d.gdprApplies === false ||
+                d.eventStatus === "tcloaded" ||
+                d.eventStatus === "useractioncomplete")
+            )
+              loadModal();
+          });
+          setTimeout(loadModal, 3000);
+        } else {
+          setTimeout(loadModal, 2000);
+        }
+      });
+    </script>
+
+    <!--PWA-->
+    <div id="pwa-install-modal" class="pwa-modal-overlay">
+      <div class="pwa-modal-content">
+        <img src="images/jojodle.png" alt="App Logo" class="pwa-logo">
+        <h3>Jojodle.com</h3>
+        <p>Install the Jojodle.com app for faster access and offline play!</p>
+        <div class="pwa-btn-group">
+          <button id="pwa-install-btn" class="pwa-btn pwa-btn-install">
+            Add to Home Screen
+          </button>
+          <button id="pwa-close-btn" class="pwa-btn pwa-btn-close">
+            Maybe Later
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          // Modifique el parámetro ?v=X según la versión de caché del dominio
+          navigator.serviceWorker
+            .register("/serviceWorker.js?v=2")
+            .then((reg) => {
+              reg.onupdatefound = () => {
+                const installingWorker = reg.installing;
+                installingWorker.onstatechange = () => {
+                  if (
+                    installingWorker.state === "installed" &&
+                    navigator.serviceWorker.controller
+                  ) {
+                    console.log("Nueva versión PWA lista para usarse.");
+                  }
+                };
+              };
+            })
+            .catch((err) =>
+              console.error("Error al registrar el Service Worker:", err),
+            );
+        });
+      }
+
+      let deferredPrompt;
+      const installModal = document.getElementById("pwa-install-modal");
+      const installBtn = document.getElementById("pwa-install-btn");
+      const closeBtn = document.getElementById("pwa-close-btn");
+
+      const isStandalone =
+        window.matchMedia("(display-mode: standalone)").matches ||
+        window.navigator.standalone;
+
+      // Detección por Cambio de Día en el calendario local del usuario
+      const todayString = new Date().toLocaleDateString();
+      const dismissedDate = localStorage.getItem("pwaPromptDismissedDate");
+      let isDismissed = false;
+
+      if (dismissedDate) {
+        if (dismissedDate === todayString) {
+          isDismissed = true;
+        } else {
+          localStorage.removeItem("pwaPromptDismissedDate");
+        }
+      }
+
+      window.addEventListener("beforeinstallprompt", (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+      });
+
+      window.addEventListener("load", () => {
+        if (!isStandalone && !isDismissed) {
+          setTimeout(() => {
+            if (!window.matchMedia("(display-mode: standalone)").matches) {
+              if (installModal) installModal.style.display = "flex";
+            }
+          }, 20000); // Activación a los 20 segundos
+        }
+      });
+
+      if (installBtn) {
+        installBtn.addEventListener("click", async () => {
+          installModal.style.display = "none";
+          if (deferredPrompt) {
+            deferredPrompt.prompt();
+            deferredPrompt = null;
+          } else {
+            alert(
+              "To install, use your browser menu and select 'Add to Home Screen'.",
+            );
+          }
+        });
+      }
+
+      if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+          installModal.style.display = "none";
+          localStorage.setItem("pwaPromptDismissedDate", todayString);
+        });
+      }
+    </script>
+  
+
+</body></html>
